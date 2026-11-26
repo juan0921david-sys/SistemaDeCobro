@@ -1,0 +1,32 @@
+# Dependencias
+node_modules/
+
+# Variables de entorno y secretos
+.env
+.env.*
+!.env.example
+
+# Resultados generados
+coverage/
+dist/
+
+# Datos locales de PostgreSQL
+postgres-data/
+
+# Credenciales de firma y resultados de compilación
+credentials.json
+*.pem
+*.key
+*.p8
+*.p12
+*.jks
+*.mobileprovision
+*.apk
+*.aab
+*.ipa
+*.dump
+/backups/
+
+
+.DS_Store
+Thumbs.db

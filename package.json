@@ -1,0 +1,23 @@
+{
+  "name": "sistema-de-cobro",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sistema de cobro con aplicación web, móvil y API REST.",
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:api": "npm run dev --workspace apps/api",
+    "dev:web": "npm run dev --workspace apps/web",
+    "dev:mobile": "npm start --workspace apps/mobile",
+    "build:web": "npm run build --workspace apps/web",
+    "check:mobile": "npm exec --workspace apps/mobile -- tsc --noEmit",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "format:check": "npm run format:check --workspaces --if-present"
+  }
+}
